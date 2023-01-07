@@ -39,11 +39,19 @@
 h1{
   text-align: center;
   font-size: xx-large;
+ padding-top: -50px;
 }
 img{
   display: block;
   margin: 0 auto;
   width: 25%;
+  margin-top:-20px;
+}
+h2{
+  text-align: start;
+  padding-left: 20px;
+  padding-right: 80px;
+  padding-top: 70px;
 }
 .error-output{
   margin-left: 10px;
@@ -51,3 +59,19 @@ img{
   font-style: italic;
   color: red;
 }
+.UserValid{
+  text-align: center;
+  margin-top: -660px;
+  padding-left: 1px;
+}
+.contanier{
+  display: block;
+  background: yellow;
+  align-items: center;
+  justify-content: center;
+  padding: 70px;
+  padding-left: 40px;
+  margin: 250px;
+  margin-top: 40px;
+}
+
