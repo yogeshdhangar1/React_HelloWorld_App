@@ -1,6 +1,11 @@
 import React from 'react';
 import './App.css';
 import logo from './BL logo.svg.png'
+import Home from './component/Home.js'
+import Bridgelabz from './component/Bridgelabz';
+import About from './component/About';
+import { Route, Routes, Link } from "react-router-dom"
+
 
 class App extends React.Component{
   url ="www.google.com"
@@ -29,33 +34,34 @@ class App extends React.Component{
   render(){
     return(
       <>
-      <div className='contanier'>
-        <h1>{this.state.userName} from Bridgelabz</h1>
-        <img src={logo} width={150}height={150} onClick = {this.onClick}
-         alt="Bridgelab Logo: Bridge to Employement Trough Lab Work"/>
-         <h2>At Bridgelabz We re Comunnity of </h2>
-         <ul>
-          <li>technologist</li>
-          <li>thinkers</li>
-          <li>builders</li>
-         </ul>
-         <p>
-         Working together to keep the Tech Employability of Engineers alive and accessible,<br />
-         so Tech Companines worldwide can get contributors and creators for Technology solutions <br />
-         We believe this act of human collaboration across an employability platform is essential <br />
-         to individual growth and our collective future.
-         </p>
-         <p>
-         To Know About us,visit <a href="https://www.bridgelabz.com/"> BridgeLabz</a> <br />
-         to learn even more about our mission i.e. <strong>Employability to all</strong>
-         </p>
+      <Routes>
+        <Route path = '/home' element ={<Home/>}/>
+        <Route path='/about' element = {<About/>}/>
+        <Route path = '/section' element = {<Bridgelabz/>}/>
+      </Routes>
+      <header></header>
+      <div id="main">
+        <article>
+        <div className="App">
+            <div>
+              <h2>Hello {this.state.userName} from Bridgelabz</h2>
+              <img src={logo} onClick={this.onClicks} alt='The Bridgelabz logo: a Bridge to Employement through lab Works'/>
+            </div>
+            <div>
+              <input onChange={this.onNameChange} />
+              <span className='error_output'>{this.state.nameError}</span>
+              <br></br>
+            </div>
+          </div>
+          <Bridgelabz></Bridgelabz>
+        </article>
+        <nav></nav>
+        <aside></aside>
       </div>
-      <div className='UserValid'>
-        <input onChange ={this.onNameChange} />
-        <span className='error-output'>{this.state.nameError}</span>
-      </div>
-      </>
-    );
+      <footer></footer>
+    </>
+    );     
+    
   }
 }
 export default App;
