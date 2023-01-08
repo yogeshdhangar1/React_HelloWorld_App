@@ -1,12 +1,10 @@
 .App {
   text-align: center;
 }
-
 img{
   width:200px;
   height:200px
 }
-
 .error_output{
   margin-left: 10px;
   font-size: 12px;
